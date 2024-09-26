@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spin Wheel</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="spinBtn"></div>
@@ -21,26 +23,30 @@
             <div class="number" style="--i:5;
             --clr:#ff340f;"><span>烤肉饭</span></div>
             <div class="number" style="--i:6;
-            --clr:#ff7f50;"><span>三只马面馆</span></div>
+            --clr:#ff7f50;"><span>骉小面</span></div>
             <div class="number" style="--i:7;
-            --clr:#3cb371;"><span>饿死</span></div>
+            --clr:#3cb371;"><span>食堂</span></div>
             <div class="number" style="--i:8;
-            --clr:#4169e1;"><span>吃屎</span></div>
+            --clr:#5b7bdd;"><span>冒菜</span></div>
+            <div class="number" style="--i:9;
+            --clr:#96dd5b;"><span>六婶儿</span></div>
         </div>
-        
+
     </div>
     <script>
         let wheel = document.querySelector(".wheel");
         let spinBtn = document.querySelector(".spinBtn");
         let value = Math.ceil(Math.random() * 3600);
 
-        spinBtn.onclick = function(){
+        spinBtn.onclick = function () {
 
             // wheel.style.transition = "all 5s ease";
-            wheel.style.transform = 'rotate('+ value +'deg)';
-            value += Math.ceil(Math.random() * 3600);
+            wheel.style.transform = 'rotate(' + value + 'deg)';
+            value = 0;
+            value += Math.ceil(Math.random() * 7200);
         }
-        
+
     </script>
 </body>
+
 </html>
