@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin Wheel</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="spinBtn"></div>
+        <div class="wheel">
+            <div class="number" style="--i:1;
+            --clr:#db7093;"><span>黄焖鸡</span></div>
+            <div class="number" style="--i:2;
+            --clr:#20b2aa;"><span>鸡公煲</span></div>
+            <div class="number" style="--i:3;
+            --clr:#d63e92;"><span>新疆炒米粉</span></div>
+            <div class="number" style="--i:4;
+            --clr:#daa520;"><span>螺蛳粉</span></div>
+            <div class="number" style="--i:5;
+            --clr:#ff340f;"><span>烤肉饭</span></div>
+            <div class="number" style="--i:6;
+            --clr:#ff7f50;"><span>三只马面馆</span></div>
+            <div class="number" style="--i:7;
+            --clr:#3cb371;"><span>饿死</span></div>
+            <div class="number" style="--i:8;
+            --clr:#4169e1;"><span>吃屎</span></div>
+        </div>
+        
+    </div>
+    <script>
+        let wheel = document.querySelector(".wheel");
+        let spinBtn = document.querySelector(".spinBtn");
+        let value = Math.ceil(Math.random() * 3600);
+
+        spinBtn.onclick = function(){
+
+            // wheel.style.transition = "all 5s ease";
+            wheel.style.transform = 'rotate('+ value +'deg)';
+            value += Math.ceil(Math.random() * 3600);
+        }
+        
+    </script>
+</body>
+</html>
